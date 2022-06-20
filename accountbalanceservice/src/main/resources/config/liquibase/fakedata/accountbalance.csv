@@ -1,0 +1,4 @@
+id,account_id,remaining,currency
+1,1,100,ruble
+2,2,300,dollar
+3,3,50,euro

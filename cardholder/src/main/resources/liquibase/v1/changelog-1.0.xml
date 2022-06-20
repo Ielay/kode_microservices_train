@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create_cards_table" author="vpetrov">
+        <createTable tableName="cards">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="cards_pk"/>
+            </column>
+            <column name="account_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="card_number" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="ccv" type="varchar(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="valid_through" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

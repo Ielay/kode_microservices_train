@@ -6,7 +6,7 @@
 
     <changeSet id="create_cards_table" author="vpetrov">
         <createTable tableName="cards">
-            <column name="id" type="bigint">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" primaryKeyName="cards_pk"/>
             </column>
             <column name="account_id" type="bigint">
